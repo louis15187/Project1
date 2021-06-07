@@ -5,7 +5,8 @@ Cybersecurity Project 1
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/)
+![Network Diagram](https://user-images.githubusercontent.com/50034238/121077856-2853a100-c7a6-11eb-89cc-583e5e2d3b0f.png)
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -61,8 +62,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-  The main advantage of automating configuration with Ansible is you can move from the jumpbox into the ansible container very easily and navigate to others if the       ssh keys are updated.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, The main advantage of automating configuration with Ansible is you can move from the jumpbox into the ansible container very easily and navigate to others if the ssh keys are updated
 
 
 The playbook implements the following tasks:
