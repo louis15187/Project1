@@ -62,12 +62,17 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+  The main advantage of automating configuration with Ansible is you can move from the jumpbox into the ansible container very easily and navigate to others if the       ssh keys are updated.
+
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install Docker.io
+- Install python3-pip
+- Install Docker Module
+- Increase Virtual Memory
+- Download and launch the ELK container
+- Enable the docker on boot
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -94,8 +99,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- The file of the playbook is located in Roles folder filebeat-playbook.yml. The playbook is copied onto Web 1 and Web 2.
+- The file we update is the filebeat-config.yml. I specify which machine to install Filebeat on by changing around the filebeat-config.yml file from hosts to   webservers
 - Run: curl http://10.1.0.4:5601. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+Run ansible-playbook filebeat-playbook.yml.
